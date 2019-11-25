@@ -1,9 +1,11 @@
 .box{
-	border-radius: 3px;
+	border-radius: 4px;
 	padding: 30px;
 	margin-top: 20px;
-	margin: 20px;
-	border: 1px solid black;
+	margin: 195px;
+	border: 2px solid green;
+	width: 750px;
+	
 }
 
 nav {
