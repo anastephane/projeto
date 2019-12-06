@@ -5,34 +5,41 @@
 	margin: 195px;
 	border: 2px solid green;
 	width: 750px;
+	font-weight: bold;
 	
 }
 
 nav  {
 	background-color: #1ee854;
-	
+	font-weight: bold;
 	
 }
 
-.formProdutor {
+.formProdutos {
 	box-shadow: 0px 0px 2px grey;
 	padding-top: 25px;
 	padding-left: 35px;
-	padding-right: 15px;
-	padding-bottom: 25px;
+	padding-right: 20px;
+	padding-bottom: 55px;
 	margin-top: 60px;
 	font-size: 15pt;
 	font-family: Tahoma;
 	
 }
 
-.formServidores {
-	box-shadow: 0px 0px 2px grey;
-	padding-top: 25px;
-	padding-left: 35px;
+
+.login {
+	border:2px solid green;
+	padding-top: 30px;
+	padding-left: 20px;
 	padding-right: 15px;
-	padding-bottom: 25px;
+	padding-bottom: 35px;
 	margin-top: 60px;
-	font-size: 15pt;
-	font-family: Tahoma;
+	padding: 100px;
+	width: 60%;
+	border-radius: 7px;
+}
+
+button {
+	margin-top: 25px;
 }
