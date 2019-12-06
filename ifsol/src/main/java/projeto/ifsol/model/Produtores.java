@@ -1,5 +1,6 @@
 package projeto.ifsol.model;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -7,17 +8,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
-public class Produtores implements UserDetails {
+public class Produtores implements UserDetails, Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
 	private String login;
 	private String produto;
-	private String nomeProdutor;
 	private String senha;
 	
 	public String getLogin() {
@@ -32,12 +34,6 @@ public class Produtores implements UserDetails {
 	}
 	public void setProduto(String produto) {
 		this.produto = produto;
-	}
-	public String getNomeProdutor() {
-		return nomeProdutor;
-	}
-	public void setNomeProdutor(String nomeProdutor) {
-		this.nomeProdutor = nomeProdutor;
 	}
 	public String getSenha() {
 		return senha;
@@ -58,7 +54,7 @@ public class Produtores implements UserDetails {
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return this.nomeProdutor;
+		return this.login;
 	}
 	@Override
 	public boolean isAccountNonExpired() {
