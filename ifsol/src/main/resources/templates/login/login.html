@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html
+	 xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+>
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
@@ -34,6 +38,7 @@
 								<i class="material-icons prefix">lock_outline</i>
 								<input type="password" name="password" class="form-control" placeholder="Senha"/>
 							</div>		
+							<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 		<center>
 		<button class="waves-effect waves-light btn" type="submit">ACESSAR</button>
 		</center>

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html
+	 xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+>
 <head>
 <meta charset="UTF-8">
 <title>Início</title>
@@ -11,6 +15,7 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="style/css.css">
+		
 </head>
 <body>
 	<nav>
@@ -18,9 +23,9 @@
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/inicio">INÍCIO</a></li>
-        <li><a href="/cadastrarProduto">CADASTRAR PRODUTO</a></li>
         <li><a href="/listaProdutos">PRODUTOS DISPONÍVEIS</a></li>
-        <li><a href="/login" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Fazer Login</a></li>
+        <li sec:authorize="hasRole('PRODUTORES')"><a href="/cadastrarProduto">CADASTRAR PRODUTO</a></li>
+        <li><a href="/entrar" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Fazer Login</a></li>
       </ul>
     </div>
   </nav>
