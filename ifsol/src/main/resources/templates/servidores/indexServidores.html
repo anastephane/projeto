@@ -20,7 +20,6 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Lista de Produtos Disponíveis</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/cadastrarEvento" class="waves-effect waves-light btn"><i class="material-icons left"> add_circle_outline</i>Reservar Produto</a> </a></li>
       </ul>
     </div>
   </nav>
@@ -29,14 +28,14 @@
 		<table class="container"> 
 		<thead> 
 			<tr> 
-				<th>Produto:</th>
+				<th>Produto</th>
+				<th>Reserva</th>
 			</tr>
 		</thead> 
 			<tbody>
 			<tr th:each="produto : ${produtos}">
-				<td><a th:href="${(#mvc.url('EC#detalhesprodutos').arg(0, produtos.codigo)).build()}"><span th:text="${produto.nome}"></span></a></td>
 				<td><span th:text="${produto.nome}"></span></td>
-				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarProduto').arg(0, produto.codigo)).build()}"><i class="material-icons left">delete</i></td>
+				<td><a  class="waves-effect waves-light btn-small" th:href="${(#mvc.url('SC#reservaProdutos').arg(0, produto.id)).build()}"><span th:text="${produto.nome}"></span><i class="material-icons left">done</i></a></td>
 		</tr>				
 	</tbody>
 </table>
