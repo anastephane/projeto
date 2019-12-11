@@ -28,20 +28,24 @@
   </nav>
   
 	</header>
-		<table class="container"> 
+		<div>
+		<table class="container listaProdutos"> 
 		<thead> 
 			<tr> 
 				<th>Produto</th>
+				<th>Data Reserva</th>
 				<th>Reserva</th>
 			</tr>
 		</thead> 
 			<tbody>
 			<tr th:each="produto : ${produtos}">
-				<td><span th:text="${produto.nome}"></span></td>
-				<td><a  class="waves-effect waves-light btn-small" th:href="${(#mvc.url('SC#reservaProdutos').arg(0, produto.id)).build()}"><span th:text="${produto.nome}"></span><i class="material-icons left">done</i></a></td>
+				<td><span th:text="${produto.produto}"></span></td>
+				<td><span th:text="${produto.dataReserva}"></span></td>
+				<td><a  class="waves-effect waves-light btn-small" th:href="${(#mvc.url('SC#reservaProdutos').arg(0, produto.id)).build()}"><span></span><i class="material-icons left">done</i></a></td>
 		</tr>				
 	</tbody>
 </table>
+</div>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="materialize/js/materialize.min.js"></script>	
 		</body>

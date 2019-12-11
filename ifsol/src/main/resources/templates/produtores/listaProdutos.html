@@ -16,14 +16,14 @@
 <body>
 	<nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">CADASTRO DE PRODUTORES</a>
+      <a href="#" class="brand-logo">LISTAGEM</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         
         <li><a href="/logout" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Sair</a></li>
       </ul>
     </div>
   </nav>
-	<table class="container">
+	<table class="container listaProdutos">
 		<thead>
 			<tr>
 				<th>Produto</th>
@@ -32,11 +32,11 @@
 			</tr>		
 		</thead>
 		<tbody>
-		<tr th:each="produto : ${produtores}">
+		<tr th:each="produto : ${produtos}">
 		
 			<td><span th:text="${produto.produto}"></span></td>
-			<td><span th:text="${produto.editar}"></span></td>
-			<td><a th:href="${(#mvc.url('CC#removerProduto').arg(0, produto.codigo)).build()}">Deletar</a></td>
+			<td><span th:text="${produto.nomeProdutor}"></span></td>
+			<td><span><a th:href="${(#mvc.url('PC#deletarProduto').arg(0, produto.id)).build()}"><i class="material-icons left">delete</i></a></span></td>
 		</tr>
 		</tbody>
 	</table>

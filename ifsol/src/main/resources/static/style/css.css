@@ -1,12 +1,14 @@
 .box{
-	border-radius: 4px;
+	border-radius: 7px;
 	padding: 30px;
 	margin-top: 20px;
 	margin: 195px;
 	border: 2px solid green;
 	width: 750px;
 	font-weight: bold;
-	
+	background-color: white;
+	opacity: 0.8;
+
 }
 
 nav  {
@@ -24,6 +26,7 @@ nav  {
 	margin-top: 60px;
 	font-size: 15pt;
 	font-family: Tahoma;
+	background-color: white;
 	
 }
 
@@ -42,4 +45,16 @@ nav  {
 
 button {
 	margin-top: 25px;
+}
+body{
+	background-image: url("img.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+.listaProdutos{
+	background-color: white;
+	margin-top: 10px;
 }
